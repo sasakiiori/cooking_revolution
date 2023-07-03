@@ -4,6 +4,7 @@ class CreatePosts < ActiveRecord::Migration[6.1]
       t.integer :customer_id
       t.integer :category_id
       t.text :explanation
+      t.boolean :status
       t.timestamps
     end
   end
