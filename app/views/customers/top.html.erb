@@ -1,15 +1,15 @@
 <div class="plate mx-auto" id="cork">
   <span>ようこそ！！</span>
-  </div>
+</div>
+
 <div class="home-box mx-auto my-3">
     <p class="home-text">料理共有サイト「COOKING REVOLUTION」へ、ようこそ<br>
     このサイトは、ご自身で制作した料理や共有したい料理を
     投稿したり他の方が投稿した料理の写真等を閲覧することができます。<br>
 
     <br>
+
     <%= link_to "ログイン", new_customer_session_path, class: "btn btn-info btn-sm btn-block mb-3 sign_in"%><br>
     <%= link_to "サインイン", new_customer_registration_path, class: "btn btn-info btn-sm btn-block mb-3 sign_up"%><br>
-    <%= link_to 'ログアウト',destroy_customer_session_path, method: :delete %>
-    </p>
 
 </div>
