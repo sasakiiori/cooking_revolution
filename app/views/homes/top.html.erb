@@ -1,5 +1,29 @@
-<h1></h1>
-あいうえお
+<h1>COOKING REVOLUTION</h1>
+<h3>料理投稿サイト、COOKING REVOLUTIONへようこそ</h3>
+<br>
 
-abcde
+<h2 class="mt-3">投稿</h2>
+
+<%= form_with model: @post, local: true do |f| %>
+  
+  <div class="form-group">
+    <%= f.label :name, "料理名" %>
+    <%= f.text_field :name, class: "form-control" %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :image, "写真" %>
+    <%= f.file_field :image, class: "form-control" %>
+  </div>
+  
+  <div class="form-group">
+    <%= f.label :explanation, "料理説明" %>
+    <%= f.text_area :explanation, class: "form-control" %>
+  </div>
+
+  <%= f.submit '投稿する', class: "btn btn-success"%>
+  <%= f.submit '下書き', class: "btn btn-success"%>
+<% end %>
+
+<br>
 <%= link_to 'ログアウト',destroy_customer_session_path, method: :delete %>

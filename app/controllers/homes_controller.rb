@@ -1,5 +1,5 @@
 class HomesController < ApplicationController
   def top
-      p "aaaaa"
+    @post = Post.new
   end
 end
