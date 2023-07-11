@@ -3,6 +3,8 @@ class PostsController < ApplicationController
   end
 
   def show
+    @customer = current_customer
+    @post = Post.find(params[:id])
   end
 
   def create
@@ -27,7 +29,7 @@ class PostsController < ApplicationController
   end
 
   private
-  
+
   def post_params
     params.require(:post).permit(:name, :explanation, :image)
   end
