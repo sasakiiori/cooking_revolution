@@ -1,2 +1,8 @@
 <h1>Posts#index</h1>
 <p>Find me in app/views/posts/index.html.erb</p>
+
+<% @posts.each do |post| %>
+ <p><%= post.name %></p>
+ <p><%= post.explanation %></p>
+ <p><%= image_tag post.get_image %></p>
+<% end %>

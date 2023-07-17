@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   def index
+    @posts = Post.where(customer_id: current_customer.id).order(created_at: :desc)
   end
 
   def show
