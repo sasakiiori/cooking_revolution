@@ -1,14 +1,32 @@
 <h1>Posts#show</h1>
 <p>Find me in app/views/posts/show.html.erb</p>
 
-<div>
-  <%= image_tag @customer.get_profile_image %>
-  <%= @customer.name %>
-  <br>
-  <%= image_tag @post.get_profile_image %>
-  <%= @post.name %>
-  <%= @post.explanation %>
-</div>
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <%= image_tag @customer.get_profile_image %>
+      <%= @customer.name %>
+    <br>
+      <%= image_tag @post.get_image(1000, 1000) %>
+    </div>
+    <div class="col">
+      <br><br><br><br>
+      ★料理名
+      <br>
+      <%= @post.name %>
+    <br><br><br><br>
+      ★料理説明
+      <br>
+      <%= @post.explanation %>
+    </div>
+  </div>
+  </div>
+
+
+
+
+
+<%= link_to '投稿一覧', posts_path %>
 
 <%= link_to 'ログアウト',destroy_customer_session_path, method: :delete %>
 <%= link_to 'トップページへ', top_path %>
