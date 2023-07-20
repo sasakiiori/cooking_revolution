@@ -9,4 +9,5 @@ Rails.application.routes.draw do
 
   resources :posts
   resources :customers
+  resource :favorites, only: [:create, :destroy]
 end

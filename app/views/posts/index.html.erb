@@ -13,4 +13,6 @@
     <%= link_to "削除", posts_path(post.id) , method: :delete, "data-confirm" => "投稿を削除しますか。", class: "btn btn-danger"%>
   </div>
 <% end %>
+<%= link_to 'トップページへ', top_path %>
+<%= link_to 'ユーザー情報', customer_path(current_customer.id) %>
 </div>

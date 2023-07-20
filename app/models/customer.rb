@@ -6,6 +6,7 @@ class Customer < ApplicationRecord
 
   has_many :posts
   has_one_attached :image
+  has_many :favorites
 
   def get_profile_image
     unless image.attached?

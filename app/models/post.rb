@@ -2,6 +2,7 @@ class Post < ApplicationRecord
   scope :publics, -> { where(status: true) }
   has_one_attached :image
   belongs_to :customer
+  has_many :favorites
 
   def get_image(width, height)
     unless image.attached?
