@@ -10,7 +10,7 @@
     </div>
     <div class="col-md"><%= post.name %></div>
     <div class="col-md"><%= post.explanation %></div>
-    <%= link_to "削除", posts_path(post.id) , method: :delete, "data-confirm" => "投稿を削除しますか。", class: "btn btn-danger"%>
+    <%= link_to "削除", post_path(post.id) , method: :delete, "data-confirm" => "投稿を削除しますか。", class: "btn btn-danger"%>
   </div>
 <% end %>
 <%= link_to 'トップページへ', top_path %>
