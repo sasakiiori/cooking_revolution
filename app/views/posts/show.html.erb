@@ -20,6 +20,10 @@
   </div>
   </div>
 
+  <% @post.tags.each do |tag| %>
+  <span class="btn btn-primary"><%= tag.name %></span>
+<% end %>
+
 
 
 

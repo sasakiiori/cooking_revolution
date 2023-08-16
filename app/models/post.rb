@@ -3,6 +3,7 @@ class Post < ApplicationRecord
   has_one_attached :image
   belongs_to :customer
   has_many :favorites
+  has_many :tags
 
   def get_image(width, height)
     unless image.attached?

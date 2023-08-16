@@ -8,10 +8,15 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
+
   def create
     @post = current_customer.posts.build(post_params)
+    tags = Vision.get_image_data(post_params[:image])
     @post.status = false if params[:commit] == "下書き"
     if @post.save
+      tags.each do |tag|
+        @post.tags.create(name: tag)
+      end
       flash[:notice] = "success"
       redirect_to post_path(@post)
     else
